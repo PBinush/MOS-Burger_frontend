@@ -1,8 +1,206 @@
-#goOrder {
-    background-color: #44bc32;
-    padding: 6px;
-    text-align: center;
-    margin-top: auto;
-    border-radius: 5px;
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  --primary-font: "Inter", sans-serif;
+  --primary-color: #dc6b19;
+  --addButton-color: #03c90d;
+}
+
+#search-bar{
+  font-family: var(--primary-font);
+  width: 60%;
+  padding: 0.4rem;
+  border: 1.5px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+#search-bar:focus{
+  width: 70%;
+  outline: none;
+}
+
+.product-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 5px;
+  border: var(--primary-color) solid 2px;
+  border-radius: 50px;
+  padding: 3px;
+}
+.card-body .action-icons img {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: none;
+}
+.card-body .action-icons img:hover {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+.btn-primary {
+  font-family: "Poppins", sans-serif !important;
+  padding: 10px !important;
+  background-color: var(--primary-color) !important;
+  border: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--addButton-color) !important;
+  border: var(--addButton-color) !important;
+}
+
+.modal-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.form-label {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+}
+
+.form-control {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  border: #dc6b19 solid 1px !important;
+}
+
+.addButton {
+  background-color: #03c90d !important;
+  border: none !important;
+  border-radius: 5px !important;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.image-upload {
+  border: 1px solid #dc6b19;
+  position: relative;
+  border-radius: 5px;
+}
+
+
+/* #modalProductImage {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border: #dc6b19 solid 2px;
+} */
+
+/* .image-upload {
+  border: 1px solid #dc6b19;
+  position: relative;
+  border-radius: 5px;
+}
+.image-upload:hover {
+  background: #f5f5f5;
+}
+.image-upload input[type="file"] {
+  width: 100%;
+  opacity: 0;
+  height: 100px;
+  position: relative;
+  z-index: 9;
+  cursor: pointer;
+}
+.image-upload .image-uploads {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+}
+.image-upload .image-uploads h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #212b36;
+} */
+
+.category-card {
+  border: 1px solid var(--primary-color);
+  height: 100px;
+  width: 100px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 0 10px 0;
+  cursor: pointer;
+  margin: 5px;
+}
+.category-card:hover {
+  background-color: #bebebe;
+}
+.category-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 3px;
+}
+
+.product-card {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  height: 19rem !important;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.product-card img {
+  width: 180px;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #000000;
+}
+.product-price{
+  color: var(--primary-color);
+}
+.order-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.order-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.card {
+  border-radius: 10px !important;
+  box-shadow: #bebebe 0px 0px 10px 0px !important;
+}
+
+.card-title{
+  font-family: var(--secondary-font);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.card-text{
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.active{
+  color: var(--primary-color) !important;
+}
+
+.modal-header.bg-success {
+  background-color: #28a745; /* Success green color */
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+.modal-body {
+  font-size: 16px;
 }

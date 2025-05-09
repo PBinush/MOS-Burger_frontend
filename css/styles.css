@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-color : #dc6b19;
+}
+body {
+  min-height: 100vh;
+}
+
+.header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.logo {
+  color: var(--primary-color);
+}
+
+
+.navbar a {
+  position: relative;
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: 0.3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+.logout {
+  color: red;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* .btn-custom {
+    border-color: var(--primary-color);
+  } */
+
+.btn-outline-warning {
+  color: var(--primary-color) !important;
+  border: var(--primary-color) solid 2px !important;
+  border-radius: 40px !important;
+  padding: 10px 40px 10px 40px !important;
+}
+
+.btn-outline-warning:hover {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
+}
+.active{
+  color: var(--primary-color) !important;
+}
+
+@media (max-width: 800px) {
+  .hero-image{
+    visibility: visible;
+  }
+}

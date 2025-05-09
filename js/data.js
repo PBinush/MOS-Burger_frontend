@@ -5,7 +5,7 @@ let productList = {
       name: "Classic Burger",
       price: 1500.0,
       discount: 0,
-      img: "../assets/images/Burger-Category/Classic Burger(Large).webp",
+      img: "../assets/images/Burger-Category/Classic Burger (Large).webp",
     },
     {
       itemCode: "B1002",
@@ -587,7 +587,6 @@ let orderList = [
   }
 ];
 
-
 //Get Orders
 export function getOrders() {
   loadOrdersFromLocalStorage();
@@ -683,4 +682,3 @@ function loadOrdersFromLocalStorage() {
     orderList = JSON.parse(storedProducts);
   }
 }
-
