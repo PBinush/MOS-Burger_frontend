@@ -185,6 +185,7 @@ function addNewProduct() {
   const productPrice = parseFloat(document.getElementById("modalPrice").value);
   const category = document.getElementById("modalProductCategory");
   const discount = parseFloat(document.getElementById("modalDiscount").value);
+  const discount1 = parseInt(document.getElementById("modalDiscount").value);
 
   const productCategory = category.options[category.selectedIndex].text;
 
@@ -206,7 +207,7 @@ function addNewProduct() {
     itemCode: productCode,
     name: productName,
     price: productPrice,
-    discount: discount,
+    discount: discount1,
     img: uploadedImage,
     category: productCategory
   };
