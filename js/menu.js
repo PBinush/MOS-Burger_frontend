@@ -202,6 +202,15 @@ function addNewProduct() {
     img: uploadedImage,
   };
 
+  const newJsonProduct = {
+    itemCode: productCode,
+    name: productName,
+    price: productPrice,
+    discount: discount,
+    img: uploadedImage,
+    category: productCategory
+  };
+
   if (!products[productCategory]) {
     products[productCategory] = [];
   }
@@ -209,7 +218,16 @@ function addNewProduct() {
   currentCategory = productCategory;
 
   //Add Product to Array
-  setProduct(newProduct, currentCategory);
+  fetch("http://localhost:8080/api/product/save", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newJsonProduct)
+  })
+  .then(response => response.json())
+  .then(data => console.log("Product saved:", data))
+  .catch(error => console.error("Error saving product:", error));
   updateProductList(newProduct, products[productCategory].length - 1);
   showSuccessModal();
 
